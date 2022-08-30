@@ -1,19 +1,27 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+//ToDo: Shaking Animation right and left
 
 void main() {
-  return runApp(
-    MaterialApp(
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.blueGrey,
         appBar: AppBar(
           backgroundColor: Colors.blueGrey.shade900,
-          title: Center(child: Text('Ask Me Anything')),
+          title: const Center(child: Text('Ask Me Anything')),
         ),
-        body: MagicBall(),
+        body: const Center(child: MagicBall()),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class MagicBall extends StatefulWidget {
